@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <main name="Description">
+        <meta name="description" content="This is a simple portfolio website created as part of a Coursera assignment. It showcases my skills and projects as a SQL Developer.">    
+    <title>Coursera Assignment</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body id="top">
+    <header>
+        <h1>Example Portfolio</h1>
+        <nav class="main-nav" aria-label="Main navigation" role="navigation">
+            <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about-me">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section name="about-me" id="about-me" aria-labelledby="about-me-heading">
+        <h2>About Me</h2>
+        <p>I am a SQL Developer with over 20 years experience in delivering database solutions across various industries.  
+            Over that time I have developed solutions in ASP.Net, C#, and other technologies (Anyone remember 
+            <a href="https://en.wikipedia.org/wiki/Wireless_Application_Protocol" target="_blank">WAP</a>?).<br>
+            This website is not, however, my full portfolio.  It is a demonstration of my ability to create a simple, accessible, 
+            and responsive website using HTML and CSS.  The site is designed to be viewed on any device, from desktop to mobile, and is fully accessible to users with disabilities.<br>
+            As such, licenced stock images have been used to illustrate the projects, and the client names have been redacted for confidentiality.    
+        
+        </p>
+        <p><a href="#top">Back to top</a></p>
+    </section>
+
+    <section name="projects" id="projects" aria-labelledby="projects-heading">
+        <h2 id="projects-heading">Projects</h2>
+        <p>Virtually all of my work is confidential, but some clients have formally recognised its value. <i>"The work has helped give 
+            <redacted>redacted client name </redacted> significant competitive advantage in our sector"</i> <br>
+            The following are the last three projects I have worked on, with the client names redacted for confidentiality.
+        </p>
+
+        <label for="project-filter">Filter projects by category:</label>
+        <select id="project-filter" onchange="filterProjects(this.value)">
+            <option value="all">All projects</option>
+            <option value="qlik">Qlik</option>
+            <option value="snowflake">Snowflake</option>
+            <option value="bi">BI</option>
+        </select>
+
+        <article data-category="qlik">
+            <h3>Private Client, Shipping - Qlik Developer</h3>
+            <figure>
+                <img src="images/BusinessWomanMonitor_H200.jpg" alt="Stock image of a computer screen with a dashboard" width=400 max-width="100%" height="auto">
+                <figcaption>Figure 1: Legacy Dashboard</figcaption>
+            </figure>
+            <p>Working within the International Shipping industry, the client wanted to replace its legacy Qlik estate with a modern platform based on Snowflake and Thoughtspot AI. <br>
+                Working with the Customer Experience, Data Governance and DBT teams, I was a central resource for interpreting the client's existing Business Logic and provided a simple yet robust data model for their developers.
+            </p>
+        </article>
+
+        <article data-category="snowflake">
+            <h3>NHS Client - Snowflake Developer</h3>
+            <figure>
+                <img src="images\ClinicianDiagnosisScreen_H200.jpg" alt="Stock image of a clinician reviewing patient data" width=400 max-width="100%" height="auto">
+                <figcaption>Figure 2: Clinician reviewing patient data</figcaption>
+            </figure>
+            <p>Full Migration of an NHS Trust's existing on-premise data warehouse via Microsoft Azure pipelines onto Snowflake.  
+                As Key Architect, my role was to develop procedures and strategies for the migration whilst training the Trust's team of five SQL Developers on cloud-based concepts and techniques.</p>
+        </article>
+
+        <article data-category="bi">
+            <h3>Private Client, Legal - BI Developer</h3>
+            <figure>
+                <img src="images\Training2_H200.jpg" alt="Stock image of a team discussion" width=400 max-width="100%" height="auto">
+                <figcaption>Figure 3: Team Discussion</figcaption>
+            </figure>
+            <p>Development of a centralised Data Warhouse solution for the Client's Case Managment system.
+    Central to this role was the provision of an MVC WebApp that simplified the ETL management processes and constrained diverse operational data into common Business Definitions.
+    Once delivered, the information within the warehouse was used to gain insight into the client's extensive portfolio and to drive change in operational practices.</p>
+    </article>
+        <p><a href="#top">Back to top</a></p>
+    <section name="skills" id="skills" aria-labelledby="skills-heading">
+        <h2>Skills</h2>
+        <p>Here are some of my skills.</p>
+        <ul>
+            <li><b>RDBMS - </b> SQL Server, Azure SQL Database</li>
+            <li><b>Azure - </b>Data Factory, Azure DevOps, Azure Storage Explorer</li>
+            <li><b>Snowflake - </b> Snowsight, SnowSQL, SnowPark</li>
+            <li><b>Modelling - </b> ETL, ELT, Kimball, Qlik QVD Architecture, SSIS, SSAS, DAX, Entity Framework</li>
+            <li><b>Coding - </b>C#, ASP.Net Framework, JavaScript, tSQL, Python, CSS, HTML, CI/CD Pipelines, Git</li>
+            <li><b>Reporting - </b> Qlik, Power BI, SSRS, SAP BusinessObjects, some Tableau</li>
+            <li><b>Communication - </b> Collaborative design, Stakeholder Design, Proof of Concept and Workshop development</li>
+        </ul>
+        <p><a href="#top">Back to top</a></p>
+    </section>  
+
+    <section name="contact" id="contact" aria-labelledby="contact-heading">
+        <h2>Contact</h2>
+        <p>You can reach me at <a href="mailto:example@email.com">example@email.com</a>.</p>
+        <form id="contact-form" role="form">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="project">Request Details:</label><br>
+            <textarea id="project" name="project" rows="5" cols="40" required></textarea><br><br>
+
+            <button type="submit">Send Request</button>
+        </form>
+        <p><a href="#top">Back to top</a></p>
+    </section>
+
+<footer><p>&copy; 2026 My Website. All rights reserved.</p></footer>
+
+    <div class="lightbox" id="project-lightbox" hidden>
+        <div class="lightbox-content" role="dialog" aria-modal="true" aria-labelledby="lightbox-title">
+            <button class="lightbox-close" type="button" aria-label="Close image viewer">&times;</button>
+            <h2 id="lightbox-title" class="visually-hidden">Project image viewer</h2>
+            <img class="lightbox-image" src="" alt="">
+        </div>
+    </div>
+    
+    <script src="script.js" defer></script>
+</body>
+</html>
